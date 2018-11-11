@@ -15,6 +15,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.google.android.material.snackbar.Snackbar
 import com.rp.util.fragment.FragmentBuilder
+import com.rp.util.toast.RToast
 
 
 abstract class BaseActivity : AppCompatActivity(), IBaseView, SwipeRefreshLayout.OnRefreshListener {
@@ -31,6 +32,7 @@ abstract class BaseActivity : AppCompatActivity(), IBaseView, SwipeRefreshLayout
         setContentView(layoutRes)
         context = this
         FragmentBuilder.initManager(supportFragmentManager)
+        RToast.init(this);
     }
 
     override fun onAttachSwipeRefreshLayout(swipeRefreshLayout: SwipeRefreshLayout) {
@@ -110,5 +112,10 @@ abstract class BaseActivity : AppCompatActivity(), IBaseView, SwipeRefreshLayout
 
     private fun applyFont(tv: TextView, font: Typeface) {
         tv.typeface = font
+    }
+
+    override fun onDestroy() {
+        RToast.cancel()
+        super.onDestroy()
     }
 }

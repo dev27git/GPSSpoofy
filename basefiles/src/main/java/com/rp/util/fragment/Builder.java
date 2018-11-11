@@ -1,6 +1,5 @@
 package com.rp.util.fragment;
 
-
 import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

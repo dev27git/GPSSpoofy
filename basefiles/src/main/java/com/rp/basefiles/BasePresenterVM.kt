@@ -2,7 +2,6 @@ package com.rp.basefiles
 
 import androidx.lifecycle.ViewModel
 
-
 abstract class BasePresenterVM<V : IBaseView> : ViewModel(), IBasePresenter<V> {
 
     private var view: V? = null

@@ -1,6 +1,5 @@
 package com.rp.util.adapter;
 
-
 import com.rp.basefiles.BaseAdapter;
 import com.rp.basefiles.IBaseAdapterPresenter;
 

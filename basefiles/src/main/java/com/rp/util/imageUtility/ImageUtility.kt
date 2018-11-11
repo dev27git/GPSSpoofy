@@ -12,59 +12,6 @@ import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
 import de.hdodenhof.circleimageview.CircleImageView
 
-/*fun AppCompatImageView.loadUrl(url: String, haveCallback: OnImageLoaderCallback? = null, requestOptions: RequestOptions? = null) {
-
-    load(
-            imageView = this,
-            url = url,
-            haveCallback = haveCallback,
-            requestOptions = requestOptions ?: RequestOptions().centerCrop()
-                    .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
-    )
-}
-
-fun ImageView.loadUrl(url: String, haveCallback: OnImageLoaderCallback? = null, requestOptions: RequestOptions? = null) {
-
-    load(
-            imageView = this,
-            url = url,
-            haveCallback = haveCallback,
-            requestOptions = requestOptions ?: RequestOptions().centerCrop()
-                    .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
-    )
-}
-
-fun CircleImageView.loadUrl(url: String, haveCallback: OnImageLoaderCallback? = null, requestOptions: RequestOptions? = null) {
-
-    load(
-            imageView = this,
-            url = url,
-            haveCallback = haveCallback,
-            requestOptions = requestOptions ?: RequestOptions().diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
-    )
-}
-
-private fun load(imageView: ImageView, url: String, haveCallback: OnImageLoaderCallback?, requestOptions: RequestOptions) {
-    haveCallback?.onStart()
-
-    Glide.with(imageView.context)
-            .load(url)
-            .apply(requestOptions)
-            .listener(object : RequestListener<Drawable> {
-                override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Drawable>?, isFirstResource: Boolean): Boolean {
-                    haveCallback?.onError(e)
-                    haveCallback?.onComplete()
-                    return false
-                }
-
-                override fun onResourceReady(resource: Drawable?, model: Any?, target: Target<Drawable>?, dataSource: DataSource?, isFirstResource: Boolean): Boolean {
-                    haveCallback?.onComplete()
-                    return false
-                }
-            })
-            .into(imageView)
-}*/
-
 fun ImageView.loadUrl(
         url: String,
         requestManager: RequestManager = Glide.with(this.context),

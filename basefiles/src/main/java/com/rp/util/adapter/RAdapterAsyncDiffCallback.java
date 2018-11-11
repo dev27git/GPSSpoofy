@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.DiffUtil;
 
 public final class RAdapterAsyncDiffCallback<T> extends DiffUtil.ItemCallback<T> {
 
-    private static final String TAG = RAdapterAsyncDiffCallback.class.getSimpleName();
+    public static final String TAG = RAdapterAsyncDiffCallback.class.getSimpleName();
     private RAdapterPayloadWatcher payloadWatcher;
 
     public RAdapterAsyncDiffCallback() {}
@@ -42,7 +42,6 @@ public final class RAdapterAsyncDiffCallback<T> extends DiffUtil.ItemCallback<T>
         return t.equals(t1);
     }
 
-    @SuppressWarnings("unchecked")
     @Nullable
     @Override
     public Object getChangePayload(@NonNull T oldItem, @NonNull T newItem) {

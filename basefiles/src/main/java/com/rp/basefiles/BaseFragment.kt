@@ -11,7 +11,7 @@ import com.rp.basefiles.BaseActivity
 import com.rp.basefiles.IBaseView
 
 
-internal abstract class BaseFragment : Fragment(), IBaseView, SwipeRefreshLayout.OnRefreshListener {
+abstract class BaseFragment : Fragment(), IBaseView, SwipeRefreshLayout.OnRefreshListener {
 
     private lateinit var swipeRefreshLayout: SwipeRefreshLayout
     private lateinit var baseActivity: BaseActivity

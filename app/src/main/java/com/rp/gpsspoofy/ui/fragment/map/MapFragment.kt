@@ -90,6 +90,7 @@ class MapFragment : BaseFragment(), MapMVP.IView {
         mapView.overlays.add(locationOverlayView)
 
         rxLocation = RxLocation(requireContext())
+
         rxLocation.location()
             .isLocationAvailable
             .flatMap {

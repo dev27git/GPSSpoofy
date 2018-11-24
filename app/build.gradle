@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 28
@@ -29,7 +28,7 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.0.1'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
@@ -37,7 +36,7 @@ dependencies {
     //Rx
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
     implementation 'com.patloew.rxlocation:rxlocation:1.0.5'
-    implementation 'com.google.android.gms:play-services-location:15.0.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
     //for Open Source MAP
     implementation 'org.osmdroid:osmdroid-android:6.0.2'
     implementation 'com.github.MKergall:osmbonuspack:6.5.2'
